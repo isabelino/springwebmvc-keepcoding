@@ -19,4 +19,19 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 		return repositorio.findAll();
 	}
 
+	@Override
+	public Empleado guardarEmpleado(Empleado empleado) {
+		return repositorio.save(empleado);
+	}
+
+	@Override
+	public Empleado obtenerEmpleadoPorId(Long id) {
+		return repositorio.findById(id).orElse(null);
+	}
+
+	@Override
+	public void eliminarEmpleado(Long id) {
+		repositorio.deleteById(id);
+	}
+
 }

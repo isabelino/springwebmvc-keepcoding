@@ -12,7 +12,7 @@ public class EmpleadoController {
 	@Autowired
 	private EmpleadoService servicio;
 	
-	@GetMapping("/empleados")
+	@GetMapping({"/empleados","/"})
 	public String listarEmpleados(Model modelo) {
 		
 		modelo.addAttribute("key",servicio.listaEmpleados());
