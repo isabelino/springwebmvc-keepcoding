@@ -41,8 +41,8 @@
       <td th:text=${empleados.email}></td>
       <td th:text=${empleados.telefono}></td>
       <td>
-      	<a class="btn btn-info">Editar</a>
-      	<a class="btn btn-danger">Eliminar</a>
+      	<a class="btn btn-info" th:href="@{/empleado/modificar/{id}(id=${empleados.id}) }">Editar</a>
+      	<a class="btn btn-danger" th:href="@{/empleado/eliminar/{id}(id=${empleados.id}) }">Eliminar</a>
       </td>
     </tr>
     
