@@ -2,7 +2,7 @@
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
 <meta charset="utf-8">
-<title>Empleados</title>
+<title>Areas</title>
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -10,14 +10,14 @@
 <body>
 <ul class="nav">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" th:href=@{/empleados}>Empleados</a>
+    <a class="nav-link active" aria-current="page" th:href=@{/areas}>Areas</a>
   </li>
  
   <li class="nav-item">
-    <a class="nav-link" th:href=@{/empleado/nuevo}>Nuevo Empleado</a>
+    <a class="nav-link" th:href=@{/area/nuevo}>Nueva Area</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" th:href=@{/areas}>Areas</a>
+    <a class="nav-link" th:href=@{/empleados}>Empleados</a>
   </li>
  
 </ul>
@@ -30,9 +30,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">Email</th>
-      <th scope="col">Telefono</th>
+      <th scope="col">Codigo</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
@@ -40,12 +38,11 @@
     <tr th:each="empleados:${key}">
       <th th:text=${empleados.id}></th>
       <td th:text=${empleados.nombre}></td>
-      <td th:text=${empleados.apellido}></td>
-      <td th:text=${empleados.email}></td>
-      <td th:text=${empleados.telefono}></td>
+      <td th:text=${empleados.codigo}></td>
+     
       <td>
-      	<a class="btn btn-info" th:href="@{/empleado/modificar/{id}(id=${empleados.id}) }">Editar</a>
-      	<a class="btn btn-danger" th:href="@{/empleado/eliminar/{id}(id=${empleados.id}) }">Eliminar</a>
+      	<a class="btn btn-info" th:href="@{/area/modificar/{id}(id=${empleados.id}) }">Editar</a>
+      	<a class="btn btn-danger" th:href="@{/area/eliminar/{id}(id=${empleados.id}) }">Eliminar</a>
       </td>
     </tr>
     

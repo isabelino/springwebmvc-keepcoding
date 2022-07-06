@@ -48,7 +48,7 @@ public class EmpleadoController {
 	@PostMapping("/empleado/actualizar/{id}")
 	public String actualizarEmpleado(@PathVariable Long id,
 			@ModelAttribute("empleado") Empleado empleado) {
-		
+	
 		Empleado actualizarEmp= servicio.obtenerEmpleadoPorId(id);
 		actualizarEmp.setId(id);
 		actualizarEmp.setNombre(empleado.getNombre());
@@ -59,8 +59,8 @@ public class EmpleadoController {
 		servicio.guardarEmpleado(actualizarEmp);
 		
 		return "redirect:/empleados";
-		
 	}
+	
 	
 	
 	@GetMapping("/empleado/eliminar/{id}")

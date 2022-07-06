@@ -4,3 +4,8 @@ INSERT INTO empleados( nombre,apellido,email,telefono) VALUES('Maria','Ladelbarr
 INSERT INTO empleados( nombre,apellido,email,telefono) VALUES('Grecia','Yava','gv@hotmail.com',63322112);
 INSERT INTO empleados( nombre,apellido,email,telefono) VALUES('Angella','Esonoestaba','ae@hotmail.com',65322112);
 INSERT INTO empleados( nombre,apellido,email,telefono) VALUES('Rossana','Despierta','rd@hotmail.com',6322112);
+
+INSERT INTO areas(nombre,codigo) VALUE ("TI","ATI01");
+INSERT INTO areas(nombre,codigo) VALUE ("FINANZAS","BFI02");
+INSERT INTO areas(nombre,codigo) VALUE ("GERENCIA","AG01");
+INSERT INTO areas(nombre,codigo) VALUE ("RRHH","RRHH01");
